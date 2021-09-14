@@ -11,6 +11,7 @@ import SearchPost from './SearchPost';
 import SearchTag from './SearchTag';
 import Users from './Users';
 import Profile from './Profile';
+import EditProfile from './EditProfile';
 import Login from './Login';
 import Server from './Server';
 
@@ -22,6 +23,7 @@ function App() {
       <Switch>
         <Route exact path="/questions" component={AllQuestions}/>
         <Route exact path="/profile" component={Profile}/> 
+        <Route exact path="/profile/edit" component={EditProfile}/> 
         <Route exact path="/users" component={Users}/>
         <Route exact path="/askquestion" component={AskQuestion}/>
         <Route exact path="/searchpost/:search_string" component={SearchPost}/>

@@ -62,11 +62,17 @@ const useStyles=makeStyles((theme)=> ({
         maxWidth: 50,
         backgroundColor: theme.palette.background.paper
       },
-      paper: {
+      paper1: {
         padding: theme.spacing(1),
         textAlign: 'center',
         color: theme.palette.text.secondary,
       },
+      paper: {
+        padding: theme.spacing(2),
+        margin: 'auto',
+        maxWidth: 1500,
+    },
+
     
   
 }));
