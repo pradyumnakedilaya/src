@@ -10,6 +10,12 @@ import Typography from '@material-ui/core/Typography';
 import EditIcon from '@material-ui/icons/Edit';
 import SettingsIcon from '@material-ui/icons/Settings';
 import NavBar from './NavBar';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+
 
 import TextField from "@material-ui/core/TextField";
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
@@ -59,7 +65,14 @@ const useStyles=makeStyles((theme)=> ({
       page: {
         background:"white",
         width:"100%"
-      }  
+      },
+      formControl: {
+        margin: theme.spacing(1),
+        minWidth: 120,
+      },
+      selectEmpty: {
+        marginTop: theme.spacing(1),
+      }      
 }));
 
 function Profile() {
@@ -174,11 +187,9 @@ function Profile() {
         <Grid item xs={12}>
         <Paper className={classes.paper}>
         <form action="" name = "questionForm" className ={classes.root}>
-            <Typography gutterBottom variant="h4" component="h5" color ="#000">
-                <b>Edit Profile</b>
-            </Typography>
+                <b>Edit Profile:</b>
             <Box>
-            <Typography gutterBottom variant="h6" component="h5" color ="#000">
+            <Typography gutterBottom variant="h6" component="h6" color ="#000">
                 Public Information:
             </Typography>
             </Box>
@@ -193,6 +204,12 @@ function Profile() {
                 User Name:
               </Typography>
               <TextField variant="extended" id="outlined-basic" label="User Name/ Email" width="200%" variant="outlined"  onChange={setTitle}/>
+              </div>
+              <div>
+              <Typography gutterBottom variant="h6" component="h5" color ="#000">
+                Social Link:
+              </Typography>
+              <TextField variant="extended" id="outlined-basic" label="Social Link" width="200%" variant="outlined"  onChange={setTitle}/>
               </div>
               <Typography gutterBottom variant="h6" component="h5" color ="#000">
                 About you:
